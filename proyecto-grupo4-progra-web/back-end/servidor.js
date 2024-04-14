@@ -60,15 +60,14 @@ const usuarioSchema = {
 };
 
 //Crea la entidad Usuario.
-const User = new Entity("Usuario", usuarioSchema);
+const Usuario = new Entity("Usuario", usuarioSchema);
 
 //Sincroniza la Base de Datos.
 const syncronizeDB = () => {
     sequelize
       .sync()
       .then(async () => {
-        await User.sync();
-        await Note.sync();
+        await Usuario.sync();
       })
       .catch((error) => {
         console.error("Error synchronizing database:", error);
