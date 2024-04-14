@@ -7,6 +7,16 @@ const { Sequelize, DataTypes } = require("sequelize");
 app.use(express.json());
 app.use(cors());
 
+//controlador 
+app.get("/api", (req, res) => {
+  res.send("Servidor ACTIVO");
+});
+
+//Para escuchar en puerto configurado 3008
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
+
 //Conecxion a Base De Datos.
 const sequelize = new Sequelize({
     dialect: "mysql",
@@ -42,8 +52,18 @@ const usuarioSchema = {
         allowNull: false,
         unique: false,
     },
+    usuario_Apellido: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
+    },
     usuario_Email: {
       type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    usuario_Telefono: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
     },
@@ -51,11 +71,6 @@ const usuarioSchema = {
       type: DataTypes.STRING,
       allowNull: false,
       unique: false,
-    },
-    usuario_Telefono: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        unique: true,
     },
 };
 
