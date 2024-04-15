@@ -40,11 +40,13 @@ function App() {
               Tienda OnLine
             </Typography>
 
-            <Button color="inherit" to="/" >Inicio</Button>
+            <Button color="inherit" href="/" >Inicio</Button>
 
-            <Button color="inherit" to="/Usuario">Registro</Button>
+            <Button color="inherit" href="/Usuario">Registro</Button>
 
-            <Button color="inherit" to="/cart">Carrito</Button>
+            <Button color="inherit" href="/cart">Carrito</Button>
+
+            <Button color="inherit" href="/Usuario">USUARIO</Button>
           </Toolbar>
         </AppBar>
       </Box>
