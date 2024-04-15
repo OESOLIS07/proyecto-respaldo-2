@@ -39,13 +39,9 @@ function App() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Tienda OnLine
             </Typography>
-
             <Button color="inherit" href="/" >Inicio</Button>
-
             <Button color="inherit" href="/Usuario">Registro</Button>
-
             <Button color="inherit" href="/cart">Carrito</Button>
-
             <Button color="inherit" href="/Usuario">USUARIO</Button>
           </Toolbar>
         </AppBar>
