@@ -41,6 +41,7 @@ const Usuario = () => (
           id="outlined-basic" 
           label="Password" 
           variant="outlined" 
+          type="Password"
           autoComplete="current-password"
         />
         <br />
@@ -48,6 +49,7 @@ const Usuario = () => (
         <TextField 
           id="outlined-basic" 
           label="Password Confirmacion" 
+          type="Password"
           variant="outlined" 
         />
         <br />
