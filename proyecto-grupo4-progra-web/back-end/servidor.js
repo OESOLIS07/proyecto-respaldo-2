@@ -12,7 +12,7 @@ const secretKey = "unPasswordMegaSeguro0231948!";
 app.use(express.json());
 app.use(cors());
 
-// Controlador
+// Controlador para el browser
 app.get("/api", (req, res) => {
   res.send("Servidor ACTIVO");
 });
@@ -88,6 +88,8 @@ const syncronizeDB = () => {
       console.error("Error synchronizing database:", error);
     });
 };
+
+//syncronizeDB(); /*Llama la sincronizacion con la base de datos*/
 
 // Ruta para registrar un nuevo usuario
 app.post("/register", async (req, res) => {
