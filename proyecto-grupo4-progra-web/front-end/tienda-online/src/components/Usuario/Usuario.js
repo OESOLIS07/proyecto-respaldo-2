@@ -32,6 +32,7 @@ const Usuario = () => {
           id="outlined-basic" 
           label="Email" 
           variant="outlined" 
+          type="Email"
         />
         <br />
         <br />
@@ -67,7 +68,7 @@ const Usuario = () => {
         {password === passwordConfirmacion ?(
           <h2></h2>
           ):(
-          <h4>El Password NO COINCIDE</h4>
+          <h4>Debe confirmar su Password</h4>
           )
           }
         <br />

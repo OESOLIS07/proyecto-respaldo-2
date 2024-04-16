@@ -59,7 +59,7 @@ const ResponsiveAppBar = () => {
               <Typography textAlign="center">Carrito</Typography>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">USUARIO</Typography>
+              <Typography textAlign="center">Login</Typography>
             </MenuItem>
           </Menu>
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
@@ -70,7 +70,7 @@ const ResponsiveAppBar = () => {
               <Button color="inherit" href="/" >Inicio</Button>
               <Button color="inherit" href="/Usuario">Registro</Button>
               <Button color="inherit" href="/cart">Carrito</Button>
-              <Button color="inherit" href="/Usuario">USUARIO</Button>
+              <Button color="inherit" href="/Login">Login</Button>
             </>
           )}
         </Toolbar>

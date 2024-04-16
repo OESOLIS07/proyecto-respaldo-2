@@ -7,6 +7,7 @@ import axios from "axios";
 import Usuario from "./components/Usuario/Usuario";
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
+import Login from './components/Login/Login';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -29,6 +30,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/Usuario" element={<Usuario />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/cart" element={<Cart cart={cart} />} />
           <Route path="/" element={<Home addToCart={addToCart} />} />
         </Routes>

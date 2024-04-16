@@ -11,8 +11,9 @@ const Login = () => (
         <br />
         <TextField 
           id="outlined-basic" 
-          label="Nombre Usuario" 
+          label="Email" 
           variant="outlined" 
+          type="Email"
         />
         <br />
         <br />
