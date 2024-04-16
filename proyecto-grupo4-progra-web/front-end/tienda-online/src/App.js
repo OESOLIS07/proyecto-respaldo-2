@@ -27,17 +27,11 @@ function App() {
     <div className="App">
       <ResponsiveAppBar />
       <Router>
-        <TransitionGroup> 
-          <Routes>
-            <Route path="/Usuario" element={<Usuario />} />
-            <Route path="/cart" element={<Cart cart={cart} />} />
-            <Route path="/" element={({ location }) => (
-              <CSSTransition key={location.key} classNames="fade" timeout={300}>
-                <Home addToCart={addToCart} />
-              </CSSTransition>
-            )} />
-          </Routes>
-        </TransitionGroup>
+        <Routes>
+          <Route path="/Usuario" element={<Usuario />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/" element={<Home addToCart={addToCart} />} />
+        </Routes>
       </Router>
     </div>
   );
