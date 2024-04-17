@@ -1,5 +1,3 @@
-//import logo from './logo.svg';
-import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
@@ -16,6 +14,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ResponsiveAppBar from './components/ResponsiveAppBar/ResponsiveAppBar';
+import ProductDetails from'./components/ProductDetails/ProductDetails';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -33,11 +32,11 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/cart" element={<Cart cart={cart} />} />
           <Route path="/" element={<Home addToCart={addToCart} />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </Router>
     </div>
   );
 }
 
-
-export default App;
+export default App;S
