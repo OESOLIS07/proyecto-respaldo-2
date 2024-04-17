@@ -79,4 +79,4 @@ const products = [
   //...
 ];
 
-export default Home;
+export { Home, products };
