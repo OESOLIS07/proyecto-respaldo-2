@@ -24,18 +24,16 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Router>
       <ResponsiveAppBar />
-      <Router>
-        <Routes>
-          <Route path="/Usuario" element={<Usuario />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
-          <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-        </Routes>
-      </Router>
-    </div>
+      <Routes>
+        <Route path="/Usuario" element={<Usuario />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/" element={<Home addToCart={addToCart} />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+    </Router>
   );
 }
 
