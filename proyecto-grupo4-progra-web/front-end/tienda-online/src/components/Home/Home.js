@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Home.module.css';
+import { Link } from 'react-router-dom';
 
 const Home = ({ addToCart }) => (
   <div className={styles.Home} data-testid="Home">
@@ -26,32 +27,18 @@ const Home = ({ addToCart }) => (
       <section className="product-list">
         <h2>Lámparas</h2>
         <div className="product-items-container">
-          <div className="product-item" onClick={() => addToCart({ name: 'Lámpara de Mesa', price: 29617.5 })}>
-            <img src="lamp1.jpg" alt="Lámpara" />
-            <h3>Lámpara de Mesa</h3>
-            <p>€29.617,50</p>
-          </div>
-          <div className="product-item" onClick={() => addToCart({ name: 'Lámpara Piso Decorativa', price: 46087.5 })}>
-            <img src="lamp2.jpg" alt="Lámpara" />
-            <h3>Lámpara Piso Decorativa</h3>
-            <p>€46.087,50</p>
-          </div>
-          <div className="product-item" onClick={() => addToCart({ name: 'Lámpara de Escritorio', price: 19492.5 })}>
-            <img src="lamp3.jpg" alt="Lámpara" />
-            <h3>Lámpara de Escritorio</h3>
-            <p>€19.492,50</p>
-          </div>
-          <div className="product-item" onClick={() => addToCart({ name: 'Lámpara de Mesa Decorativa', price: 27562.5 })}>
-            <img src="lamp4.jpg" alt="Lámpara" />
-            <h3>Lámpara de Mesa Decorativa</h3>
-            <p>€27.562,50</p>
-          </div>
-          <div className="product-item" onClick={() => addToCart({ name: 'Lámpara de Piso', price: 69937.5 })}>
-            <img src="lamp5.jpg" alt="Lámpara" />
-            <h3>Lámpara de Piso</h3>
-            <p>€69.937,50</p>
+          {products.map((product) => (
+            <div className="product-item" key={product.id}>
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>Precio: {product.price}</p>
+              <button>
+                <Link to={`/product/${product.id}`}>Ver detalles</Link>
+              </button>
+              <button onClick={() => addToCart(product)}>Agregar al carrito</button>
             </div>
-         </div>
+          ))}
+        </div>
       </section>
     </main>
     <footer className="footer">
@@ -74,6 +61,22 @@ Home.propTypes = {
   addToCart: PropTypes.func.isRequired,
 };
 
-Home.defaultProps = {};
+const products = [
+  {
+    id: 1,
+    name: 'Lámpara de Mesa',
+    price: 29617.5,
+    image: 'lamp1.jpg',
+    description: 'Lámpara de mesa de diseño moderno',
+  },
+  {
+    id: 2,
+    name: 'Lámpara Piso Decorativa',
+    price: 46087.5,
+    image: 'lamp2.jpg',
+    description: 'Lámpara de piso decorativa de diseño moderno',
+  },
+  //...
+];
 
 export default Home;
