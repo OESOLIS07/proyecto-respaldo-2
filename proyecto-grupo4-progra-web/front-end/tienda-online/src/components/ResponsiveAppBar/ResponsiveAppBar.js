@@ -63,7 +63,7 @@ const ResponsiveAppBar = () => {
             </MenuItem>
           </Menu>
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            Tienda OnLine
+            TrendNet
           </Typography>
           {!isSmScreen && ( // Conditionally render the buttons
             <>

@@ -22,8 +22,8 @@ const sequelize = new Sequelize({
   dialect: "mysql",
   host: "localhost",
   username: "root",
-  password: "1234",
-  database: "prueba_db",
+  password: "516938",
+  database: "proyecto_prograweb",
 });
 
 // Clase entidad para la creacion de las tablas
