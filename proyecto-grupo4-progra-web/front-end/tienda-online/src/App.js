@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
 import axios from "axios";
 import Usuario from "./components/Usuario/Usuario";
-import Home from './components/Home/Home';
+import { Home } from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
 import Box from '@mui/material/Box';
@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-export default App;S
+export default App;
