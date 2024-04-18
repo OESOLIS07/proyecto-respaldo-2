@@ -8,7 +8,7 @@ const Home = ({ addToCart }) => (
     
     <main className={styles['main-content']}>
       <section className={styles['product-list']}>
-        <h2>Lámparas</h2>
+        <h2>Artículos</h2>
         <div className={styles['product-items-container']}>
           {products.map((product) => (
             <div className={styles['product-item']} key={product.id}>
