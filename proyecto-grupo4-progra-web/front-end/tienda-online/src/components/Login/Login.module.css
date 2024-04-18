@@ -1,4 +1,12 @@
-.Login {}
+
+/* Login.module.css */
+
+.LoginContainer {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-futurista-degradado-geometrico_23-2149116406.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+  }
+  
 
 form {
     margin: 0 auto;

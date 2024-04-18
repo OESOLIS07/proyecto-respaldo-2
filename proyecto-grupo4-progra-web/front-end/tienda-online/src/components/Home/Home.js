@@ -76,7 +76,7 @@ const products = [
     image: 'lamp2.jpg',
     description: 'Lámpara de piso decorativa de diseño moderno',
   },
-  //...
+ 
 ];
 
 export { Home, products };

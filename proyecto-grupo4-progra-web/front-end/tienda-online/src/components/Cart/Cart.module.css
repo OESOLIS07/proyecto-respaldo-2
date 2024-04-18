@@ -1,1 +1,60 @@
-.Cart {}
+
+.LoginContainer {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Ffotos-gratis%2Ffamilia-comprando&psig=AOvVaw31VZfFuvq3wMmaaKNfy4M3&ust=1713505296273000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMi-2MCky4UDFQAAAAAdAAAAABAJ');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+  }
+.cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .cart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart li:last-child {
+    border-bottom: none;
+  }
+  
+  .cart li span {
+    flex: 1;
+  }
+  
+  .cart .MuiButton-containedPrimary {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .cart .MuiButton-containedPrimary:hover {
+    background-color: #388e3c;
+  }
+  
+  .cart .MuiButton-containedSecondary {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .cart .MuiButton-containedSecondary:hover {
+    background-color: #b71c1c;
+  }
+  
