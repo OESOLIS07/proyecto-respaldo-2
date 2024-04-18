@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
 import axios from "axios";
 import Usuario from "./components/Usuario/Usuario";
-import Home from './components/Home/Home';
+import { Home } from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
 import Box from '@mui/material/Box';
@@ -24,18 +24,16 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Router>
       <ResponsiveAppBar />
-      <Router>
-        <Routes>
-          <Route path="/Usuario" element={<Usuario />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
-          <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-        </Routes>
-      </Router>
-    </div>
+      <Routes>
+        <Route path="/Usuario" element={<Usuario />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/" element={<Home addToCart={addToCart} />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+    </Router>
   );
 }
 
